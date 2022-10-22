@@ -4,6 +4,7 @@ from tkinter import *
 from PIL import Image, ImageTk
 from pynput import keyboard
 
+#-----------------------------------------------------------------------------
 # Create Tkinter Object
 root = Tk()
 root.wm_attributes("-transparentcolor", "white")
@@ -62,7 +63,7 @@ listener = keyboard.Listener(
     on_press=on_press,
     on_release=on_release)
 listener.start()
-
+#-----------------------------------------------------------------------------
 #Key Binding - this should load a config file and load key bind from it.
 """
 | kl1  | kl2  | kl3  | kl4  | kl5  |      | kp5  | kp4  | kp3  | kp2  | kp1  |
@@ -80,18 +81,46 @@ def search_str(file_path, word):
         with open(file_path, 'r') as file:
             content = file.read()
             content_len = len(content)
-#            print(f'Content length:{content_len}')
+            #print(f'Content length:{content_len}')
             index = content.find(word, index + len(word))
             start = index + len(word)
-            end = content.find(' ', start)
+            #Need to find the end but it is not a single search. Sometimes in ZMK .config file there are tabs or new lines.
+            end1 = content.find(' ', start)
+            end2 = content.find('\n', start)
+            end3 = content.find('\t', start)
+            #We are intrested in the shortest string - because this will have the data we are looking for.
+            lowest = [end1, end2, end3]
+            end = min(lowest)
+
+            print(end)
+            #We want to check if the end is > than content_len because if we will not check it this will be an endless loop
             if end > content_len or index <0:
                 break
+            #We want to check if word is in content
             if word not in content:
                 break
+            #Want to make a set to know what type of keys are used in ZMK
             kp_set.add(content[start:end])
-            kp_list.append(content[start:end])
-#            print(content[start:end])
-#            print(index)
+            if content[start:end] == 'kp':
+                print('')
+            elif content[start:end] == 'mt':
+                print('')
+            elif content[start:end] == 'to':
+                print('')
+            elif content[start:end] == 'trans':
+                print('')
+            elif content[start:end] == 'mmv':
+                print('')
+            elif content[start:end] == 'td':
+                print('')
+            elif content[start:end] == 'mkp':
+                print('')
+            elif content[start:end] == 'mwh':
+                print('')
+            elif content[start:end] == 'bt':
+                print('')
+            #print(content[start:end])
+            #print(index)
 
 
 
@@ -101,33 +130,7 @@ print(kp_set)
 print(kp_list)
 print(len(kp_list))
 
-def search_str(file_path, word):
-    with open(file_path, 'r') as file:
-        # read all content of a file
-        content = file.read()
-        # check if string present in a file
-        if word in content:
-            print('string exist in a file')
-        else:
-            print('string does not exist in a file')
+#-----------------------------------------------------------------------------
 
-search_str(r'cradio.txt', '&kp')
+
 root.mainloop()
-
-"""
-import tkinter as tk # Python 3
-root = tk.Tk()
-# The image must be stored to Tk or it will be garbage collected.
-root.attributes("-alpha", 0.3)
-
-root.image = tk.PhotoImage(file='ferris_sweep_gui.png')
-label = tk.Label(root, image=root.image, bg="white",)
-root.overrideredirect(True)
-root.geometry("+250+100")
-root.lift()
-root.wm_attributes("-topmost", True)
-root.wm_attributes("-disabled", True)
-root.wm_attributes("-transparentcolor", "white")
-label.pack()
-label.mainloop()
-"""
