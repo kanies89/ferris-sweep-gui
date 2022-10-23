@@ -3,6 +3,7 @@ import tkinter
 from tkinter import *
 from PIL import Image, ImageTk
 from pynput import keyboard
+import math
 
 #-----------------------------------------------------------------------------
 # Create Tkinter Object
@@ -66,14 +67,111 @@ listener.start()
 #-----------------------------------------------------------------------------
 #Key Binding - this should load a config file and load key bind from it.
 """
-| kl1  | kl2  | kl3  | kl4  | kl5  |      | kp5  | kp4  | kp3  | kp2  | kp1  |
-| kl6  | kl7  | kl8  | kl9  | kl10 |      | kp10 | kp9  | kp8  | kp7  | kp6  |
-| kl11 | kl12 | kl13 | kl14 | kl15 |      | kp15 | kp14 | kp13 | kp12 | kp11 |
-                     | kl16 | kl17 |      | kp17 | kp16 |
+each key is on layer - layer[0][...] according to below scheme
+Layer = 0
+
+| 0  | 1  | 2  | 3  | 4  |      | 5  | 6  | 7  | 8  | 9  |
+| 10 | 11 | 12 | 13 | 14 |      | 15 | 16 | 17 | 18 | 19 |
+| 20 | 21 | 22 | 23 | 24 |      | 25 | 26 | 27 | 28 | 29 |
+               | 30 | 31 |      | 32 | 33 |
 """
+key_dict = {
+    'A': 'a',
+    'B': 'b',
+    'C': 'c',
+    'D': 'd',
+    'E': 'e',
+    'F': 'f',
+    'G': 'g',
+    'H': 'h',
+    'I': 'i',
+    'J': 'j',
+    'K': 'k',
+    'L': 'l',
+    'M': 'm',
+    'N': 'n',
+    'O': 'o',
+    'P': 'p',
+    'R': 'r',
+    'S': 's',
+    'T': 't',
+    'Q': 'q',
+    'U': 'u',
+    'W': 'w',
+    'X': 'x',
+    'Y': 'y',
+    'Z': 'z',
+    'LALT': 'Key.alt_l',
+    'RALT': 'Key.alt_r'
+
+}
 kp_set = set()
 kp_list = []
+layer = list()
+def findkey(start, file_path):
+    with open(file_path, 'r') as file:
+        content = file.read()
+        end1 = content.find(' ', start)
+        end2 = content.find('\n', start)
+        end3 = content.find('\t', start)
+        if end1 < 0:
+            lowest = [end2, end3]
+        elif end2 < 0:
+            lowest = [end1, end3]
+        elif end3 < 0:
+            lowest = [end1, end2]
+        else:
+            lowest = [end1, end2, end3]
+        # We are intrested in the shortest string - because this will have the data we are looking for.
+
+        print(lowest)
+        end = min(lowest)
+        return content[start:end]
 def search_str(file_path, word):
+    #Number of binded keys in ZMK config file
+    i = 0
+    keys_binded = 0
+
+    #Start looking from keymap section of the ZMK config file
+    with open(file_path, 'r') as file:
+        content = file.read()
+        index = content.find('keymap')
+    #First need to know how many layers there are
+    while True:
+        with open(file_path, 'r') as file:
+            content = file.read()
+            content_len = len(content)
+            #print(f'Content length:{content_len}')
+            index = content.find(word, index + len(word))
+            start = index + len(word)
+            #Need to find the end but it is not a single search. Sometimes in ZMK .config file there are tabs or new lines.
+            end1 = content.find(' ', start)
+            end2 = content.find('\n', start)
+            end3 = content.find('\t', start)
+            #We are intrested in the shortest string - because this will have the data we are looking for.
+            lowest = [end1, end2, end3]
+            end = min(lowest)
+
+            #print(end)
+            #We want to check if the end is > than content_len because if we will not check it this will be an endless loop
+            if end > content_len or index <0:
+                break
+            #We want to check if word is in content
+            if word not in content:
+                break
+            #Want to make a set to know what type of keys are used in ZMK
+            kp_set.add(content[start:end])
+            kp_list.append(content[start:end])
+
+    print(len(kp_list))
+    layers_number = len(kp_list)/34
+    print(layers_number)
+    for n in range(0,int(layers_number)):
+        layer.append([' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '])
+    print(layer)
+    print(layer[0][33])
+
+    #Start looking from keymap section of the ZMK config file
     with open(file_path, 'r') as file:
         content = file.read()
         index = content.find('keymap')
@@ -92,7 +190,7 @@ def search_str(file_path, word):
             lowest = [end1, end2, end3]
             end = min(lowest)
 
-            print(end)
+            #print(end)
             #We want to check if the end is > than content_len because if we will not check it this will be an endless loop
             if end > content_len or index <0:
                 break
@@ -101,24 +199,68 @@ def search_str(file_path, word):
                 break
             #Want to make a set to know what type of keys are used in ZMK
             kp_set.add(content[start:end])
+
+            if math.floor(keys_binded /34) > 4:
+                break
             if content[start:end] == 'kp':
-                print('')
+                #Want to know in which layer we are
+                if i > 33:
+                    i = 0
+                    print(math.floor(keys_binded / 34), i)
+                layer[math.floor(keys_binded / 34)][i] = findkey(end+1, r'cradio.txt')
             elif content[start:end] == 'mt':
-                print('')
+                if i > 33:
+                    i = 0
+                    print(math.floor(keys_binded / 34), i)
+                layer[math.floor(keys_binded / 34)][i] = findkey(end+1, r'cradio.txt')
             elif content[start:end] == 'to':
-                print('')
+                if i > 33:
+                    i = 0
+                    print(math.floor(keys_binded / 34), i)
+                layer[math.floor(keys_binded / 34)][i] = findkey(end+1, r'cradio.txt')
             elif content[start:end] == 'trans':
-                print('')
+                if i > 33:
+                    i = 0
+                    print(math.floor(keys_binded / 34), i)
+                layer[math.floor(keys_binded / 34)][i] = 'Empty'
             elif content[start:end] == 'mmv':
-                print('')
+                if i > 33:
+                    i = 0
+                    print(math.floor(keys_binded / 34), i)
+                layer[math.floor(keys_binded / 34)][i] = findkey(end+1, r'cradio.txt')
             elif content[start:end] == 'td':
-                print('')
+                if i > 33:
+                    i = 0
+                    print(math.floor(keys_binded / 34), i)
+                layer[math.floor(keys_binded / 34)][i] = findkey(end+1, r'cradio.txt')
             elif content[start:end] == 'mkp':
-                print('')
+                if i > 33:
+                    i = 0
+                    print(math.floor(keys_binded / 34), i)
+                layer[math.floor(keys_binded / 34)][i] = findkey(end + 1, r'cradio.txt')
             elif content[start:end] == 'mwh':
-                print('')
+                if i > 33:
+                    i = 0
+                    print(math.floor(keys_binded / 34), i)
+                layer[math.floor(keys_binded / 34)][i] = findkey(end+1, r'cradio.txt')
             elif content[start:end] == 'bt':
-                print('')
+                if i > 33:
+                    i = 0
+                    print(math.floor(keys_binded / 34), i)
+                layer[math.floor(keys_binded / 34)][i] = findkey(end+1, r'cradio.txt')
+            elif content[start:end] == 'sk':
+                if i > 33:
+                    i = 0
+                    print(math.floor(keys_binded / 34), i)
+                layer[math.floor(keys_binded / 34)][i] = findkey(end+1, r'cradio.txt')
+            elif content[start:end] == 'hm':
+                if i > 33:
+                    i = 0
+                    print(math.floor(keys_binded / 34), i)
+                layer[math.floor(keys_binded / 34)][i] = findkey(end+1, r'cradio.txt')
+            print('Found {0} in place {1} and located it in layer[{2}][{3}]'.format(content[start:end], start, math.floor(keys_binded / 34), i))
+            keys_binded += 1
+            i += 1
             #print(content[start:end])
             #print(index)
 
@@ -129,6 +271,7 @@ search_str(r'cradio.txt', '&')
 print(kp_set)
 print(kp_list)
 print(len(kp_list))
+print(layer)
 
 #-----------------------------------------------------------------------------
 
