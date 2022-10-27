@@ -102,7 +102,7 @@ key_dict = {
     'LS(COMMA)': ['<', '<'],
     'LS(DOT)': ['>', '>'],
     'SEMI': [';', ';'],
-    'SPC': ['SPACE', 'Key.space'],
+    'SPC': ['˽ꟷ', 'Key.space'],
     'TAB': ['TAB', 'Key.tab'],
     'EQUAL': ['=', '='],
     'LA(RBKT)': ['LA(RBKT', ''], #??????????????????????????
@@ -183,25 +183,56 @@ kp_set = set()
 kp_list = []
 layer = list()
 
-def findkey(start, file_path):
+def findkey(start, file_path, type):
     with open(file_path, 'r') as file:
-        content = file.read()
-        end1 = content.find(' ', start)
-        end2 = content.find('\n', start)
-        end3 = content.find('\t', start)
-        if end1 < 0:
-            lowest = [end2, end3]
-        elif end2 < 0:
-            lowest = [end1, end3]
-        elif end3 < 0:
-            lowest = [end1, end2]
+        #mh keys take two values. When pressed for ex. 200ms it switches to first value.
+        if type == 'hm':
+            hm = ['', '']
+            i = len(hm) -1
+            c_read = False
+            for value in hm:
+                if(c_read == False):
+                    content = file.read()
+                    c_read = True
+                end1 = content.find(' ', start)
+                end2 = content.find('\n', start)
+                end3 = content.find('\t', start)
+                print(end1)
+                print(end1)
+                print(end1)
+                lowest = []
+                if end1 > 0:
+                    lowest.append(end1)
+                if end2 > 0:
+                    lowest.append(end2)
+                if end3 > 0:
+                    lowest.append(end3)
+                end = min(lowest)
+                hm[i] = content[start:end]
+                start = end + 1
+                print(start)
+                i -= 1
+
+            print('HM key found. Values assigned: {0}'.format(hm))
+            return hm
+            c_read = False
         else:
-            lowest = [end1, end2, end3]
+            content = file.read()
+            end1 = content.find(' ', start)
+            end2 = content.find('\n', start)
+            end3 = content.find('\t', start)
+            lowest = []
+            if end1 > 0:
+                lowest.append(end1)
+            if end2 > 0:
+                lowest.append(end2)
+            if end3 > 0:
+                lowest.append(end3)
         # We are intrested in the shortest string - because this will have the data we are looking for.
 
-        print(lowest)
-        end = min(lowest)
-        return content[start:end]
+            print(lowest)
+            end = min(lowest)
+            return content[start:end]
 
 def search_str(file_path, word):
     #Number of binded keys in ZMK config file
@@ -283,17 +314,17 @@ def search_str(file_path, word):
                 if i > 33:
                     i = 0
                     print(math.floor(keys_binded / 34), i)
-                layer[math.floor(keys_binded / 34)][i] = findkey(end+1, r'cradio.txt')
+                layer[math.floor(keys_binded / 34)][i] = findkey(end+1, r'cradio.txt', 'kp')
             elif content[start:end] == 'mt':
                 if i > 33:
                     i = 0
                     print(math.floor(keys_binded / 34), i)
-                layer[math.floor(keys_binded / 34)][i] = findkey(end+1, r'cradio.txt')
+                layer[math.floor(keys_binded / 34)][i] = findkey(end+1, r'cradio.txt', 'mt')
             elif content[start:end] == 'to':
                 if i > 33:
                     i = 0
                     print(math.floor(keys_binded / 34), i)
-                layer[math.floor(keys_binded / 34)][i] = findkey(end+1, r'cradio.txt')
+                layer[math.floor(keys_binded / 34)][i] = findkey(end+1, r'cradio.txt', 'to')
             elif content[start:end] == 'trans':
                 if i > 33:
                     i = 0
@@ -303,37 +334,37 @@ def search_str(file_path, word):
                 if i > 33:
                     i = 0
                     print(math.floor(keys_binded / 34), i)
-                layer[math.floor(keys_binded / 34)][i] = findkey(end+1, r'cradio.txt')
+                layer[math.floor(keys_binded / 34)][i] = findkey(end+1, r'cradio.txt', 'mmw')
             elif content[start:end] == 'td':
                 if i > 33:
                     i = 0
                     print(math.floor(keys_binded / 34), i)
-                layer[math.floor(keys_binded / 34)][i] = findkey(end+1, r'cradio.txt')
+                layer[math.floor(keys_binded / 34)][i] = findkey(end+1, r'cradio.txt', 'td')
             elif content[start:end] == 'mkp':
                 if i > 33:
                     i = 0
                     print(math.floor(keys_binded / 34), i)
-                layer[math.floor(keys_binded / 34)][i] = findkey(end + 1, r'cradio.txt')
+                layer[math.floor(keys_binded / 34)][i] = findkey(end + 1, r'cradio.txt', 'mkp')
             elif content[start:end] == 'mwh':
                 if i > 33:
                     i = 0
                     print(math.floor(keys_binded / 34), i)
-                layer[math.floor(keys_binded / 34)][i] = findkey(end+1, r'cradio.txt')
+                layer[math.floor(keys_binded / 34)][i] = findkey(end+1, r'cradio.txt', 'mwh')
             elif content[start:end] == 'bt':
                 if i > 33:
                     i = 0
                     print(math.floor(keys_binded / 34), i)
-                layer[math.floor(keys_binded / 34)][i] = findkey(end+1, r'cradio.txt')
+                layer[math.floor(keys_binded / 34)][i] = findkey(end+1, r'cradio.txt', 'bt')
             elif content[start:end] == 'sk':
                 if i > 33:
                     i = 0
                     print(math.floor(keys_binded / 34), i)
-                layer[math.floor(keys_binded / 34)][i] = findkey(end+1, r'cradio.txt')
+                layer[math.floor(keys_binded / 34)][i] = findkey(end+1, r'cradio.txt', 'sk')
             elif content[start:end] == 'hm':
                 if i > 33:
                     i = 0
                     print(math.floor(keys_binded / 34), i)
-                layer[math.floor(keys_binded / 34)][i] = findkey(end+1, r'cradio.txt')
+                layer[math.floor(keys_binded / 34)][i] = findkey(end+1, r'cradio.txt', 'hm')
             print('Found {0} in place {1} and located it in layer[{2}][{3}]'.format(content[start:end], start, math.floor(keys_binded / 34), i))
             keys_binded += 1
             i += 1
@@ -391,13 +422,28 @@ for i in range(0, 34):
 #Function to switch button names
 def switch_button_name(layer_number):
     for i in range(0, 34):
-        b_text[i].set(key_dict[f'{layer[layer_number][i]}'][0])
-        print('Setting button {0} to {1} while layer {2} is active'.format('B%s' % i, b_text[i].get(), layer_number))
-        globals()['B%s' % i].configure(text=b_text[i])
-        print(b_text[i].get())
+        #need to check if button is double value, ex. "hm" or "mt". If it is than we should search the dictionary by the values of the list
+        if isinstance(layer[layer_number][i],  list):
+            count = len(layer[layer_number][i])
+            key_name = ''
 
-        b_listener_key[i] = key_dict[f'{layer[layer_number][i]}'][1]
-        print(b_listener_key[i])
+            for j in range(0, count):
+                key_name = key_name + ' ' + key_dict[f'{layer[layer_number][i][j]}'][0]
+
+            b_text[i].set(key_name)
+
+            print('Setting button {0} to {1} while layer {2} is active'.format('B%s' % i, b_text[i].get(), layer_number))
+            globals()['B%s' % i].configure(text=b_text[i])
+            print(b_text[i].get())
+            b_listener_key[i] = key_dict[f'{layer[layer_number][i][0]}'][1]
+            print(b_listener_key[i])
+        else:
+            b_text[i].set(key_dict[f'{layer[layer_number][i]}'][0])
+            print('Setting button {0} to {1} while layer {2} is active'.format('B%s' % i, b_text[i].get(), layer_number))
+            globals()['B%s' % i].configure(text=b_text[i])
+            print(b_text[i].get())
+            b_listener_key[i] = key_dict[f'{layer[layer_number][i]}'][1]
+            print(b_listener_key[i])
 
 #Here grid of the Ferris Sweep keyboard grid is made
 button_bg = "black"
