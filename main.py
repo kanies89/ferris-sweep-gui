@@ -168,7 +168,7 @@ key_dict = {
     'BT_PRV': ['BT_PRV', ''], #??????????????????????????
     'BT_NXT': ['BT_NXT', ''], #??????????????????????????
     'BT_CLR': ['BR_CLR', ''], #??????????????????????????
-    'RCTRL': ['RCTRL', ''],  #??????????????????????????
+    'RCTRL': ['RCTRL', 'Key.ctrl_r'],
     'DOT': ['DOT', ''],
     '0': ['L-0', ''],
     '1': ['L-1', ''],
@@ -560,6 +560,7 @@ def on_press(key):
                         break
         else:
             i = b_listener_key.index(key.char)
+
         print(globals()['B%s' % i])
         button_inv = globals()['B%s' % i]
         button_inv.invoke()
@@ -572,14 +573,16 @@ def on_press(key):
     except AttributeError:
         print('special key {0} pressed'.format(
             key))
-        if key not in b_listener_key:
+        if str(key) not in b_listener_key:
             for x, value in enumerate(b_listener_key):
                 if isinstance(value, list):
-                    if key in value:
+                    if str(key) in value:
+                        print('looking for key')
                         i = x
                         break
         else:
-            i = b_listener_key.index(key)
+            print('looking for key2')
+            i = b_listener_key.index(str(key))
         print(globals()['B%s' % i])
         button_inv = globals()['B%s' % i]
         button_inv.invoke()
@@ -607,14 +610,14 @@ def on_release(key):
     else:
         print('{0} released'.format(
         key))
-        if key not in b_listener_key:
+        if str(key) not in b_listener_key:
             for x, value in enumerate(b_listener_key):
                 if isinstance(value, list):
-                    if key in value:
+                    if str(key) in value:
                         i = x
                         break
         else:
-            i = b_listener_key.index(key)
+            i = b_listener_key.index(str(key))
         widget = globals()['B%s' % i]
         widget.configure(relief="raised", bg="black")
 
