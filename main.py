@@ -49,7 +49,6 @@ label1 = Label(image=img, bg="black")
 """
 each key is on layer - layer[0][...] according to below scheme
 Layer = 0
-
 | 0  | 1  | 2  | 3  | 4  |      | 5  | 6  | 7  | 8  | 9  |
 | 10 | 11 | 12 | 13 | 14 |      | 15 | 16 | 17 | 18 | 19 |
 | 20 | 21 | 22 | 23 | 24 |      | 25 | 26 | 27 | 28 | 29 |
@@ -178,6 +177,7 @@ key_dict = {
     '4': ['L-4', ''],
     'Empty': ['', '']
 }
+
 
 kp_set = set()
 kp_list = []
@@ -435,7 +435,10 @@ def switch_button_name(layer_number):
             print('Setting button {0} to {1} while layer {2} is active'.format('B%s' % i, b_text[i].get(), layer_number))
             globals()['B%s' % i].configure(text=b_text[i])
             print(b_text[i].get())
-            b_listener_key[i] = key_dict[f'{layer[layer_number][i][0]}'][1]
+            listener_double_value = []
+            for j in range(0, count):
+                listener_double_value.append(key_dict[f'{layer[layer_number][i][j]}'][1])
+            b_listener_key[i] = listener_double_value
             print(b_listener_key[i])
         else:
             b_text[i].set(key_dict[f'{layer[layer_number][i]}'][0])
@@ -453,7 +456,7 @@ button_w = 8
 button_h = 4
 
 
-B0 = tk.Button(root, textvariable=b_text[0], bg=button_bg, width=button_w, height=button_h, fg=button_fg,  font=button_font, command=lambda: [callback(b_text[0], active_layer), print('Button 0 is p')])
+B0 = tk.Button(root, textvariable=b_text[0], bg=button_bg, width=button_w, height=button_h, fg=button_fg,  font=button_font, command=lambda: callback(b_text[0], active_layer))
 B1 = tk.Button(root, textvariable=b_text[1], bg=button_bg, width=button_w, height=button_h, fg=button_fg,  font=button_font, command=lambda: callback(b_text[1], active_layer))
 B2 = tk.Button(root, textvariable=b_text[2], bg=button_bg, width=button_w, height=button_h, fg=button_fg,  font=button_font, command=lambda: callback(b_text[2], active_layer))
 B3 = tk.Button(root, textvariable=b_text[3], bg=button_bg, width=button_w, height=button_h, fg=button_fg,  font=button_font, command=lambda: callback(b_text[3], active_layer))
@@ -548,12 +551,19 @@ def on_press(key):
     try:
         print('alphanumeric key {0} pressed'.format(
             key.char))
-        i = b_listener_key.index(key.char)
+        print(b_listener_key)
+        if key.char not in b_listener_key:
+            for x, value in enumerate(b_listener_key):
+                if isinstance(value, list):
+                    if key.char in value:
+                        i = x
+                        break
+        else:
+            i = b_listener_key.index(key.char)
         print(globals()['B%s' % i])
-        print(B0)
         button_inv = globals()['B%s' % i]
         button_inv.invoke()
-        print(f'Found {b_listener_key.index(key.char)}')
+        print(f'Found {b_listener_key[i]}')
         widget = globals()['B%s' % i]
         widget.configure(relief="sunken", bg="orange")
         widget.invoke()
@@ -562,11 +572,18 @@ def on_press(key):
     except AttributeError:
         print('special key {0} pressed'.format(
             key))
-        i = b_listener_key.index(key)
+        if key not in b_listener_key:
+            for x, value in enumerate(b_listener_key):
+                if isinstance(value, list):
+                    if key in value:
+                        i = x
+                        break
+        else:
+            i = b_listener_key.index(key)
         print(globals()['B%s' % i])
         button_inv = globals()['B%s' % i]
         button_inv.invoke()
-        print(f'Found {b_listener_key.index(key)}')
+        print(f'Found {b_listener_key[i]}')
         widget = globals()['B%s' % i]
         widget.configure(relief="sunken", bg="orange")
         widget.invoke()
@@ -575,7 +592,14 @@ def on_release(key):
     if key_char == True:
         print('{0} released'.format(
         key.char))
-        i = b_listener_key.index(key.char)
+        if key.char not in b_listener_key:
+            for x, value in enumerate(b_listener_key):
+                if isinstance(value, list):
+                    if key.char in value:
+                        i = x
+                        break
+        else:
+            i = b_listener_key.index(key.char)
         widget = globals()['B%s' % i]
         widget.configure(relief="raised", bg="black")
         key_char = False
@@ -583,7 +607,14 @@ def on_release(key):
     else:
         print('{0} released'.format(
         key))
-        i = b_listener_key.index(key)
+        if key not in b_listener_key:
+            for x, value in enumerate(b_listener_key):
+                if isinstance(value, list):
+                    if key in value:
+                        i = x
+                        break
+        else:
+            i = b_listener_key.index(key)
         widget = globals()['B%s' % i]
         widget.configure(relief="raised", bg="black")
 
@@ -597,9 +628,6 @@ listener = keyboard.Listener(
     on_press=on_press,
     on_release=on_release)
 listener.start()
-
-
-
 
 #-----------------------------------------------------------------------------
 root.mainloop()
