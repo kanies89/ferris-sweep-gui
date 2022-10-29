@@ -82,17 +82,17 @@ key_dict = {
     'V': ['V', 'v'],
     'Y': ['Y', 'y'],
     'Z': ['Z', 'z'],
-    'LALT': ['ALT', 'Key.alt_l'],
-    'RALT': ['RALT', 'Key.alt_r'],
+    'LALT': ['ALT', 'key.alt_l'],
+    'RALT': ['RALT', 'key.alt_r'],
     'MINUS': ['-', '-'],
-    'BKSP': ['<--', 'Key.backspace'],
-    'LGUI': ['LWIN', 'Key.cmd'],
-    'RGUI': ['RWIN', 'Key.menu'],
+    'BKSP': ['<--', 'key.backspace'],
+    'LGUI': ['LWIN', 'key.cmd'],
+    'RGUI': ['RWIN', 'key.menu'],
     'UNDERSCORE': ['_', '_'],
     'EXCL': ['!', '!'],
     'LC(LS(LALT))': ['LC(LS(LALT))', ''],
-    'LSHIFT': ['SHIFT', 'Key.shift'],
-    'ESC': ['ESC', 'Key.esc'],
+    'LSHIFT': ['SHIFT', 'key.shift'],
+    'ESC': ['ESC', 'key.esc'],
     'ATSN': ['@', '@'],
     'LC(LG(LS(N4)))': ['#', '#'],
     'DLLR': ['$', '$'],
@@ -101,8 +101,8 @@ key_dict = {
     'LS(COMMA)': ['<', '<'],
     'LS(DOT)': ['>', '>'],
     'SEMI': [';', ';'],
-    'SPC': ['˽ꟷ', 'Key.space'],
-    'TAB': ['TAB', 'Key.tab'],
+    'SPC': ['˽ꟷ', 'key.space'],
+    'TAB': ['TAB', 'key.tab'],
     'EQUAL': ['=', '='],
     'LA(RBKT)': ['LA(RBKT', ''], #??????????????????????????
     'LA(LS(RBKT))': ['LA(LS(RBKT))', ''], #??????????????????????????
@@ -111,7 +111,7 @@ key_dict = {
     'LBRC': ['{', '{'],
     'RBRC': ['}', '}'],
     'PIPE': ['|', '|'],
-    'ENTER': ['ENTER', 'Key.enter'],
+    'ENTER': ['ENTER', 'key.enter'],
     'TILDE': ['~', '~'],
     'LA(N3)': ['LA(N3)', ''], #??????????????????????????
     'LA(LBKT)': ['LA(LBKT)', ''], #??????????????????????????
@@ -128,8 +128,8 @@ key_dict = {
     'N7': ['7', '7'],
     'N8': ['8', '8'],
     'N9': ['9', '9'],
-    'C_VOL_DN': ['VOL-', 'Key.media_volume_down'],
-    'C_VOL_UP': ['VOL+', 'Key.media_volume_up'],
+    'C_VOL_DN': ['VOL-', 'key.media_volume_down'],
+    'C_VOL_UP': ['VOL+', 'key.media_volume_up'],
     'LS(EQUAL)': ['+', '+'],
     'N4': ['4', '4'],
     'N5': ['5', '5'],
@@ -149,26 +149,26 @@ key_dict = {
     'LC(LS(TAB))': ['LC(LS(TAB))', ''], #??????????????????????????
     'RC(TAB)': ['RC(TAB)', ''], #??????????????????????????
     'LG(RBKT)': ['LG(RBKT)', ''], #??????????????????????????
-    'F1': ['F1', 'Key.f1'],
+    'F1': ['F1', 'key.f1'],
     'MOVE_LEFT': ['M_L', ''], #??????????????????????????
     'MOVE_DOWN': ['M_D', ''], #??????????????????????????
     'MOVE_RIGHT': ['M_R', ''], #??????????????????????????
-    'DEL': ['DEL', 'Key.delete'],
-    'LEFT': ['LEFT', 'Key.left'],
-    'DOWN': ['DOWN', 'Key.down'],
-    'UP': ['UP', 'Key.up'],
-    'RIGHT': ['RIGHT', 'Key.right'],
+    'DEL': ['DEL', 'key.delete'],
+    'LEFT': ['LEFT', 'key.left'],
+    'DOWN': ['DOWN', 'key.down'],
+    'UP': ['UP', 'key.up'],
+    'RIGHT': ['RIGHT', 'key.right'],
     'LG(GRAVE)': ['LG(GRAVE)', ''], #??????????????????????????
     'RCLK': ['RCLK', ''], #??????????????????????????
     'SCROLL_UP': ['SCR_UP', ''], #??????????????????????????
     'SCROLL_DOWN': ['SCR_DN', ''], #??????????????????????????
     'LCLK': ['LCLK', ''], #??????????????????????????
-    'PG_DN': ['PAGE DN', 'Key.page_down'],
+    'PG_DN': ['PAGE DN', 'key.page_down'],
     'K_VOL_DN': ['', ''], #??????????????????????????
     'BT_PRV': ['BT_PRV', ''], #??????????????????????????
     'BT_NXT': ['BT_NXT', ''], #??????????????????????????
     'BT_CLR': ['BR_CLR', ''], #??????????????????????????
-    'RCTRL': ['RCTRL', 'Key.ctrl_r'],
+    'RCTRL': ['RCTRL', 'key.ctrl_r'],
     'DOT': ['DOT', ''],
     '0': ['L-0', ''],
     '1': ['L-1', ''],
@@ -550,16 +550,16 @@ def on_press(key):
     global key_char
     try:
         print('alphanumeric key {0} pressed'.format(
-            key.char))
+            str(key.char).lower()))
         print(b_listener_key)
         if key.char not in b_listener_key:
             for x, value in enumerate(b_listener_key):
                 if isinstance(value, list):
-                    if key.char in value:
+                    if str(key.char).lower() in value:
                         i = x
                         break
         else:
-            i = b_listener_key.index(key.char)
+            i = b_listener_key.index(str(key.char).lower())
 
         print(globals()['B%s' % i])
         button_inv = globals()['B%s' % i]
@@ -572,17 +572,17 @@ def on_press(key):
 
     except AttributeError:
         print('special key {0} pressed'.format(
-            key))
-        if str(key) not in b_listener_key:
+            str(key).lower()))
+        if str(key).lower() not in b_listener_key:
             for x, value in enumerate(b_listener_key):
                 if isinstance(value, list):
-                    if str(key) in value:
+                    if str(key).lower() in value:
                         print('looking for key')
                         i = x
                         break
         else:
             print('looking for key2')
-            i = b_listener_key.index(str(key))
+            i = b_listener_key.index(str(key).lower())
         print(globals()['B%s' % i])
         button_inv = globals()['B%s' % i]
         button_inv.invoke()
@@ -594,30 +594,30 @@ def on_release(key):
     global key_char
     if key_char == True:
         print('{0} released'.format(
-        key.char))
-        if key.char not in b_listener_key:
+        str(key.char).lower()))
+        if str(key.char).lower() not in b_listener_key:
             for x, value in enumerate(b_listener_key):
                 if isinstance(value, list):
-                    if key.char in value:
+                    if str(key.char).lower() in value:
                         i = x
                         break
         else:
-            i = b_listener_key.index(key.char)
+            i = b_listener_key.index(str(key.char).lower())
         widget = globals()['B%s' % i]
         widget.configure(relief="raised", bg="black")
         key_char = False
 
     else:
         print('{0} released'.format(
-        key))
-        if str(key) not in b_listener_key:
+        str(key).lower()))
+        if str(key).lower() not in b_listener_key:
             for x, value in enumerate(b_listener_key):
                 if isinstance(value, list):
-                    if str(key) in value:
+                    if str(key).lower() in value:
                         i = x
                         break
         else:
-            i = b_listener_key.index(str(key))
+            i = b_listener_key.index(str(key).lower())
         widget = globals()['B%s' % i]
         widget.configure(relief="raised", bg="black")
 
