@@ -1,0 +1,399 @@
+[2023-01-20 09:45:03,687] :INFO: [gui.py:147] ---------start of the envoy_list_new script------------
+[2023-01-20 09:45:03,687] :INFO: [gui.py:155] start SN: xx:xx:xx:xx:xx
+[2023-01-20 09:45:03,687] :INFO: [gui.py:100] connecting to the peripheral
+[2023-01-20 09:45:13,705] :ERROR: [gui.py:106] peripheral xx:xx:xx:xx:xx is not found, found_device None...
+[2023-01-20 09:45:13,706] :INFO: [gui.py:161] xx:xx:xx:xx:xx : ERR
+[2023-01-20 09:45:13,707] :INFO: [gui.py:171] ===end of SN====: xx:xx:xx:xx:xx
+[2023-01-20 09:45:13,708] :INFO: [gui.py:155] start SN: yy:yy:yy:yy:yy
+[2023-01-20 09:45:13,709] :INFO: [gui.py:100] connecting to the peripheral
+[2023-01-20 09:45:23,710] :ERROR: [gui.py:106] peripheral yy:yy:yy:yy:yy is not found, found_device None...
+[2023-01-20 09:45:23,711] :INFO: [gui.py:161] yy:yy:yy:yy:yy : ERR
+[2023-01-20 09:45:23,711] :INFO: [gui.py:171] ===end of SN====: yy:yy:yy:yy:yy
+[2023-01-20 09:45:23,711] :INFO: [gui.py:173] ################  RESULTS  ################
+[2023-01-20 09:45:23,711] :INFO: [gui.py:176] xx:xx:xx:xx:xx : ERR
+[2023-01-20 09:45:23,711] :INFO: [gui.py:176] yy:yy:yy:yy:yy : ERR
+[2023-01-20 09:45:57,475] :INFO: [gui.py:147] ---------start of the envoy_list_new script------------
+[2023-01-20 09:45:57,475] :INFO: [gui.py:155] start SN: E2:EA:89:24:D3:1F
+[2023-01-20 09:45:57,476] :INFO: [gui.py:100] connecting to the peripheral
+[2023-01-20 09:45:57,564] :INFO: [gui.py:108] RSSI: -66
+[2023-01-20 09:45:57,564] :INFO: [gui.py:110] BleakClient Initialising...
+[2023-01-20 09:45:57,565] :ERROR: [gui.py:115] peripheral E2:EA:89:24:D3:1F is not found
+[2023-01-20 09:45:57,565] :INFO: [gui.py:161] E2:EA:89:24:D3:1F : ERR
+[2023-01-20 09:45:57,565] :INFO: [gui.py:171] ===end of SN====: E2:EA:89:24:D3:1F
+[2023-01-20 09:45:57,565] :INFO: [gui.py:155] start SN: yy:yy:yy:yy:yy
+[2023-01-20 09:45:57,565] :INFO: [gui.py:100] connecting to the peripheral
+[2023-01-20 09:46:07,584] :ERROR: [gui.py:106] peripheral yy:yy:yy:yy:yy is not found, found_device None...
+[2023-01-20 09:46:07,585] :INFO: [gui.py:161] yy:yy:yy:yy:yy : ERR
+[2023-01-20 09:46:07,585] :INFO: [gui.py:171] ===end of SN====: yy:yy:yy:yy:yy
+[2023-01-20 09:46:07,586] :INFO: [gui.py:173] ################  RESULTS  ################
+[2023-01-20 09:46:07,587] :INFO: [gui.py:176] E2:EA:89:24:D3:1F : ERR
+[2023-01-20 09:46:07,588] :INFO: [gui.py:176] yy:yy:yy:yy:yy : ERR
+[2023-01-20 09:46:31,070] :INFO: [gui.py:147] ---------start of the envoy_list_new script------------
+[2023-01-20 09:46:31,070] :INFO: [gui.py:155] start SN: E2:EA:89:24:D3:1F
+[2023-01-20 09:46:31,070] :INFO: [gui.py:100] connecting to the peripheral
+[2023-01-20 09:46:31,098] :INFO: [gui.py:108] RSSI: -58
+[2023-01-20 09:46:31,098] :INFO: [gui.py:110] BleakClient Initialising...
+[2023-01-20 09:46:31,098] :ERROR: [gui.py:115] peripheral E2:EA:89:24:D3:1F is not found
+[2023-01-20 09:46:31,098] :INFO: [gui.py:161] E2:EA:89:24:D3:1F : ERR
+[2023-01-20 09:46:31,098] :INFO: [gui.py:171] ===end of SN====: E2:EA:89:24:D3:1F
+[2023-01-20 09:46:31,099] :INFO: [gui.py:155] start SN: E2:EA:89:24:D3:1F
+[2023-01-20 09:46:31,099] :INFO: [gui.py:100] connecting to the peripheral
+[2023-01-20 09:46:31,626] :INFO: [gui.py:108] RSSI: -61
+[2023-01-20 09:46:31,626] :INFO: [gui.py:110] BleakClient Initialising...
+[2023-01-20 09:46:31,627] :ERROR: [gui.py:115] peripheral E2:EA:89:24:D3:1F is not found
+[2023-01-20 09:46:31,627] :INFO: [gui.py:161] E2:EA:89:24:D3:1F : ERR
+[2023-01-20 09:46:31,627] :INFO: [gui.py:171] ===end of SN====: E2:EA:89:24:D3:1F
+[2023-01-20 09:46:31,627] :INFO: [gui.py:173] ################  RESULTS  ################
+[2023-01-20 09:46:31,627] :INFO: [gui.py:176] E2:EA:89:24:D3:1F : ERR
+[2023-01-20 09:46:31,627] :INFO: [gui.py:176] E2:EA:89:24:D3:1F : ERR
+[2023-01-20 09:47:01,638] :INFO: [gui.py:155] start SN: E2:EA:89:24:D3:1F
+[2023-01-20 09:47:01,638] :INFO: [gui.py:100] connecting to the peripheral
+[2023-01-20 09:47:01,790] :INFO: [gui.py:108] RSSI: -62
+[2023-01-20 09:47:01,790] :INFO: [gui.py:110] BleakClient Initialising...
+[2023-01-20 09:47:01,790] :ERROR: [gui.py:115] peripheral E2:EA:89:24:D3:1F is not found
+[2023-01-20 09:47:01,790] :INFO: [gui.py:161] E2:EA:89:24:D3:1F : ERR
+[2023-01-20 09:47:01,790] :INFO: [gui.py:171] ===end of SN====: E2:EA:89:24:D3:1F
+[2023-01-20 09:47:01,790] :INFO: [gui.py:155] start SN: E2:EA:89:24:D3:1F
+[2023-01-20 09:47:01,790] :INFO: [gui.py:100] connecting to the peripheral
+[2023-01-20 09:47:02,110] :INFO: [gui.py:108] RSSI: -64
+[2023-01-20 09:47:02,110] :INFO: [gui.py:110] BleakClient Initialising...
+[2023-01-20 09:47:02,110] :ERROR: [gui.py:115] peripheral E2:EA:89:24:D3:1F is not found
+[2023-01-20 09:47:02,110] :INFO: [gui.py:161] E2:EA:89:24:D3:1F : ERR
+[2023-01-20 09:47:02,110] :INFO: [gui.py:171] ===end of SN====: E2:EA:89:24:D3:1F
+[2023-01-20 09:47:02,110] :INFO: [gui.py:173] ################  RESULTS  ################
+[2023-01-20 09:47:02,110] :INFO: [gui.py:176] E2:EA:89:24:D3:1F : ERR
+[2023-01-20 09:47:02,111] :INFO: [gui.py:176] E2:EA:89:24:D3:1F : ERR
+[2023-01-20 09:47:27,034] :INFO: [gui.py:147] ---------start of the envoy_list_new script------------
+[2023-01-20 09:47:27,036] :INFO: [gui.py:155] start SN: E2:EA:89:24:D3:1F
+[2023-01-20 09:47:27,037] :INFO: [gui.py:100] connecting to the peripheral
+[2023-01-20 09:47:28,287] :INFO: [gui.py:108] RSSI: -61
+[2023-01-20 09:47:28,288] :INFO: [gui.py:110] BleakClient Initialising...
+[2023-01-20 09:47:28,293] :INFO: [gui.py:112] BleakClient completed...
+[2023-01-20 09:47:28,293] :INFO: [gui.py:119] btclient conneting...
+[2023-01-20 09:47:32,115] :INFO: [gui.py:155] start SN: E2:EA:89:24:D3:1F
+[2023-01-20 09:47:32,116] :INFO: [gui.py:100] connecting to the peripheral
+[2023-01-20 09:47:32,858] :INFO: [gui.py:108] RSSI: -58
+[2023-01-20 09:47:32,858] :INFO: [gui.py:110] BleakClient Initialising...
+[2023-01-20 09:47:32,859] :ERROR: [gui.py:115] peripheral E2:EA:89:24:D3:1F is not found
+[2023-01-20 09:47:32,859] :INFO: [gui.py:161] E2:EA:89:24:D3:1F : ERR
+[2023-01-20 09:47:32,859] :INFO: [gui.py:171] ===end of SN====: E2:EA:89:24:D3:1F
+[2023-01-20 09:47:32,859] :INFO: [gui.py:155] start SN: E2:EA:89:24:D3:1F
+[2023-01-20 09:47:32,859] :INFO: [gui.py:100] connecting to the peripheral
+[2023-01-20 09:47:33,380] :INFO: [gui.py:108] RSSI: -61
+[2023-01-20 09:47:33,380] :INFO: [gui.py:110] BleakClient Initialising...
+[2023-01-20 09:47:33,380] :ERROR: [gui.py:115] peripheral E2:EA:89:24:D3:1F is not found
+[2023-01-20 09:47:33,380] :INFO: [gui.py:161] E2:EA:89:24:D3:1F : ERR
+[2023-01-20 09:47:33,381] :INFO: [gui.py:171] ===end of SN====: E2:EA:89:24:D3:1F
+[2023-01-20 09:47:33,381] :INFO: [gui.py:173] ################  RESULTS  ################
+[2023-01-20 09:47:33,381] :INFO: [gui.py:176] E2:EA:89:24:D3:1F : ERR
+[2023-01-20 09:47:33,381] :INFO: [gui.py:176] E2:EA:89:24:D3:1F : ERR
+[2023-01-20 09:47:57,054] :ERROR: [gui.py:170] ()
+[2023-01-20 09:47:57,057] :INFO: [gui.py:171] ===end of SN====: E2:EA:89:24:D3:1F
+[2023-01-20 09:47:57,058] :INFO: [gui.py:155] start SN: E2:EA:89:24:D3:1F
+[2023-01-20 09:47:57,059] :INFO: [gui.py:100] connecting to the peripheral
+[2023-01-20 09:47:57,323] :INFO: [gui.py:108] RSSI: -66
+[2023-01-20 09:47:57,324] :INFO: [gui.py:110] BleakClient Initialising...
+[2023-01-20 09:47:57,324] :INFO: [gui.py:112] BleakClient completed...
+[2023-01-20 09:47:57,325] :INFO: [gui.py:119] btclient conneting...
+[2023-01-20 09:48:03,385] :INFO: [gui.py:155] start SN: E2:EA:89:24:D3:1F
+[2023-01-20 09:48:03,385] :INFO: [gui.py:100] connecting to the peripheral
+[2023-01-20 09:48:03,542] :INFO: [gui.py:108] RSSI: -62
+[2023-01-20 09:48:03,543] :INFO: [gui.py:110] BleakClient Initialising...
+[2023-01-20 09:48:03,543] :ERROR: [gui.py:115] peripheral E2:EA:89:24:D3:1F is not found
+[2023-01-20 09:48:03,543] :INFO: [gui.py:161] E2:EA:89:24:D3:1F : ERR
+[2023-01-20 09:48:03,543] :INFO: [gui.py:171] ===end of SN====: E2:EA:89:24:D3:1F
+[2023-01-20 09:48:03,543] :INFO: [gui.py:155] start SN: E2:EA:89:24:D3:1F
+[2023-01-20 09:48:03,543] :INFO: [gui.py:100] connecting to the peripheral
+[2023-01-20 09:48:05,238] :INFO: [gui.py:108] RSSI: -66
+[2023-01-20 09:48:05,238] :INFO: [gui.py:110] BleakClient Initialising...
+[2023-01-20 09:48:05,238] :ERROR: [gui.py:115] peripheral E2:EA:89:24:D3:1F is not found
+[2023-01-20 09:48:05,238] :INFO: [gui.py:161] E2:EA:89:24:D3:1F : ERR
+[2023-01-20 09:48:05,238] :INFO: [gui.py:171] ===end of SN====: E2:EA:89:24:D3:1F
+[2023-01-20 09:48:05,239] :INFO: [gui.py:173] ################  RESULTS  ################
+[2023-01-20 09:48:05,239] :INFO: [gui.py:176] E2:EA:89:24:D3:1F : ERR
+[2023-01-20 09:48:05,239] :INFO: [gui.py:176] E2:EA:89:24:D3:1F : ERR
+[2023-01-20 09:48:27,071] :ERROR: [gui.py:170] ()
+[2023-01-20 09:48:27,074] :INFO: [gui.py:171] ===end of SN====: E2:EA:89:24:D3:1F
+[2023-01-20 09:48:27,074] :INFO: [gui.py:173] ################  RESULTS  ################
+[2023-01-20 09:48:57,086] :INFO: [gui.py:155] start SN: E2:EA:89:24:D3:1F
+[2023-01-20 09:48:57,087] :INFO: [gui.py:100] connecting to the peripheral
+[2023-01-20 09:48:57,129] :INFO: [gui.py:108] RSSI: -61
+[2023-01-20 09:48:57,129] :INFO: [gui.py:110] BleakClient Initialising...
+[2023-01-20 09:48:57,130] :INFO: [gui.py:112] BleakClient completed...
+[2023-01-20 09:48:57,130] :INFO: [gui.py:119] btclient conneting...
+[2023-01-20 09:49:27,101] :ERROR: [gui.py:170] ()
+[2023-01-20 09:49:27,105] :INFO: [gui.py:171] ===end of SN====: E2:EA:89:24:D3:1F
+[2023-01-20 09:49:27,105] :INFO: [gui.py:155] start SN: E2:EA:89:24:D3:1F
+[2023-01-20 09:49:27,106] :INFO: [gui.py:100] connecting to the peripheral
+[2023-01-20 09:49:27,725] :INFO: [gui.py:108] RSSI: -67
+[2023-01-20 09:49:27,725] :INFO: [gui.py:110] BleakClient Initialising...
+[2023-01-20 09:49:27,725] :INFO: [gui.py:112] BleakClient completed...
+[2023-01-20 09:49:27,726] :INFO: [gui.py:119] btclient conneting...
+[2023-01-20 09:49:43,717] :INFO: [gui.py:147] ---------start of the envoy_list_new script------------
+[2023-01-20 09:49:43,717] :INFO: [gui.py:155] start SN: E2:EA:89:24:D3:1F
+[2023-01-20 09:49:43,717] :INFO: [gui.py:100] connecting to the peripheral
+[2023-01-20 09:49:43,783] :INFO: [gui.py:108] RSSI: -59
+[2023-01-20 09:49:43,783] :INFO: [gui.py:110] BleakClient Initialising...
+[2023-01-20 09:49:43,787] :INFO: [gui.py:112] BleakClient completed...
+[2023-01-20 09:49:43,788] :INFO: [gui.py:119] btclient conneting...
+[2023-01-20 09:49:57,685] :INFO: [gui.py:147] ---------start of the envoy_list_new script------------
+[2023-01-20 09:49:57,686] :INFO: [gui.py:155] start SN: E2:EA:89:24:D3:1F
+[2023-01-20 09:49:57,686] :INFO: [gui.py:100] connecting to the peripheral
+[2023-01-20 09:49:58,131] :INFO: [gui.py:108] RSSI: -58
+[2023-01-20 09:49:58,132] :INFO: [gui.py:110] BleakClient Initialising...
+[2023-01-20 09:49:58,137] :INFO: [gui.py:112] BleakClient completed...
+[2023-01-20 09:49:58,138] :INFO: [gui.py:119] btclient conneting...
+[2023-01-20 09:50:13,726] :ERROR: [gui.py:170] ()
+[2023-01-20 09:50:13,729] :INFO: [gui.py:171] ===end of SN====: E2:EA:89:24:D3:1F
+[2023-01-20 09:50:13,729] :INFO: [gui.py:155] start SN: E2:EA:89:24:D3:1F
+[2023-01-20 09:50:13,729] :INFO: [gui.py:100] connecting to the peripheral
+[2023-01-20 09:50:13,850] :INFO: [gui.py:108] RSSI: -59
+[2023-01-20 09:50:13,850] :INFO: [gui.py:110] BleakClient Initialising...
+[2023-01-20 09:50:13,851] :INFO: [gui.py:112] BleakClient completed...
+[2023-01-20 09:50:13,851] :INFO: [gui.py:119] btclient conneting...
+[2023-01-20 09:50:27,703] :ERROR: [gui.py:170] ()
+[2023-01-20 09:50:27,707] :INFO: [gui.py:171] ===end of SN====: E2:EA:89:24:D3:1F
+[2023-01-20 09:50:27,708] :INFO: [gui.py:155] start SN: E2:EA:89:24:D3:1F
+[2023-01-20 09:50:27,709] :INFO: [gui.py:100] connecting to the peripheral
+[2023-01-20 09:50:27,860] :INFO: [gui.py:108] RSSI: -62
+[2023-01-20 09:50:27,861] :INFO: [gui.py:110] BleakClient Initialising...
+[2023-01-20 09:50:27,861] :INFO: [gui.py:112] BleakClient completed...
+[2023-01-20 09:50:27,862] :INFO: [gui.py:119] btclient conneting...
+[2023-01-20 09:50:43,741] :ERROR: [gui.py:170] ()
+[2023-01-20 09:50:43,745] :INFO: [gui.py:171] ===end of SN====: E2:EA:89:24:D3:1F
+[2023-01-20 09:50:43,745] :INFO: [gui.py:173] ################  RESULTS  ################
+[2023-01-20 09:50:57,733] :ERROR: [gui.py:170] ()
+[2023-01-20 09:50:57,736] :INFO: [gui.py:171] ===end of SN====: E2:EA:89:24:D3:1F
+[2023-01-20 09:50:57,737] :INFO: [gui.py:173] ################  RESULTS  ################
+[2023-01-20 09:51:13,746] :INFO: [gui.py:155] start SN: E2:EA:89:24:D3:1F
+[2023-01-20 09:51:13,746] :INFO: [gui.py:100] connecting to the peripheral
+[2023-01-20 09:51:13,894] :INFO: [gui.py:108] RSSI: -62
+[2023-01-20 09:51:13,894] :INFO: [gui.py:110] BleakClient Initialising...
+[2023-01-20 09:51:13,894] :INFO: [gui.py:112] BleakClient completed...
+[2023-01-20 09:51:13,894] :INFO: [gui.py:119] btclient conneting...
+[2023-01-20 09:51:27,739] :INFO: [gui.py:155] start SN: E2:EA:89:24:D3:1F
+[2023-01-20 09:51:27,741] :INFO: [gui.py:100] connecting to the peripheral
+[2023-01-20 09:51:28,135] :INFO: [gui.py:108] RSSI: -58
+[2023-01-20 09:51:28,136] :INFO: [gui.py:110] BleakClient Initialising...
+[2023-01-20 09:51:28,136] :INFO: [gui.py:112] BleakClient completed...
+[2023-01-20 09:51:28,137] :INFO: [gui.py:119] btclient conneting...
+[2023-01-20 09:51:43,754] :ERROR: [gui.py:170] ()
+[2023-01-20 09:51:43,758] :INFO: [gui.py:171] ===end of SN====: E2:EA:89:24:D3:1F
+[2023-01-20 09:51:43,758] :INFO: [gui.py:155] start SN: E2:EA:89:24:D3:1F
+[2023-01-20 09:51:43,758] :INFO: [gui.py:100] connecting to the peripheral
+[2023-01-20 09:51:44,498] :INFO: [gui.py:108] RSSI: -58
+[2023-01-20 09:51:44,498] :INFO: [gui.py:110] BleakClient Initialising...
+[2023-01-20 09:51:44,499] :INFO: [gui.py:112] BleakClient completed...
+[2023-01-20 09:51:44,499] :INFO: [gui.py:119] btclient conneting...
+[2023-01-20 09:51:57,758] :ERROR: [gui.py:170] ()
+[2023-01-20 09:51:57,762] :INFO: [gui.py:171] ===end of SN====: E2:EA:89:24:D3:1F
+[2023-01-20 09:51:57,762] :INFO: [gui.py:155] start SN: E2:EA:89:24:D3:1F
+[2023-01-20 09:51:57,763] :INFO: [gui.py:100] connecting to the peripheral
+[2023-01-20 09:51:58,260] :INFO: [gui.py:108] RSSI: -62
+[2023-01-20 09:51:58,260] :INFO: [gui.py:110] BleakClient Initialising...
+[2023-01-20 09:51:58,261] :INFO: [gui.py:112] BleakClient completed...
+[2023-01-20 09:51:58,261] :INFO: [gui.py:119] btclient conneting...
+[2023-01-20 09:52:13,773] :ERROR: [gui.py:170] ()
+[2023-01-20 09:52:13,776] :INFO: [gui.py:171] ===end of SN====: E2:EA:89:24:D3:1F
+[2023-01-20 09:52:13,776] :INFO: [gui.py:173] ################  RESULTS  ################
+[2023-01-20 09:52:27,775] :ERROR: [gui.py:170] ()
+[2023-01-20 09:52:27,778] :INFO: [gui.py:171] ===end of SN====: E2:EA:89:24:D3:1F
+[2023-01-20 09:52:27,779] :INFO: [gui.py:173] ################  RESULTS  ################
+[2023-01-20 09:52:43,778] :INFO: [gui.py:155] start SN: E2:EA:89:24:D3:1F
+[2023-01-20 09:52:43,779] :INFO: [gui.py:100] connecting to the peripheral
+[2023-01-20 09:52:43,798] :INFO: [gui.py:108] RSSI: -59
+[2023-01-20 09:52:43,798] :INFO: [gui.py:110] BleakClient Initialising...
+[2023-01-20 09:52:43,798] :INFO: [gui.py:112] BleakClient completed...
+[2023-01-20 09:52:43,799] :INFO: [gui.py:119] btclient conneting...
+[2023-01-20 09:52:57,782] :INFO: [gui.py:155] start SN: E2:EA:89:24:D3:1F
+[2023-01-20 09:52:57,784] :INFO: [gui.py:100] connecting to the peripheral
+[2023-01-20 09:52:57,825] :INFO: [gui.py:108] RSSI: -59
+[2023-01-20 09:52:57,825] :INFO: [gui.py:110] BleakClient Initialising...
+[2023-01-20 09:52:57,826] :INFO: [gui.py:112] BleakClient completed...
+[2023-01-20 09:52:57,826] :INFO: [gui.py:119] btclient conneting...
+[2023-01-20 09:53:13,792] :ERROR: [gui.py:170] ()
+[2023-01-20 09:53:13,795] :INFO: [gui.py:171] ===end of SN====: E2:EA:89:24:D3:1F
+[2023-01-20 09:53:13,795] :INFO: [gui.py:155] start SN: E2:EA:89:24:D3:1F
+[2023-01-20 09:53:13,796] :INFO: [gui.py:100] connecting to the peripheral
+[2023-01-20 09:53:15,711] :INFO: [gui.py:108] RSSI: -62
+[2023-01-20 09:53:15,711] :INFO: [gui.py:110] BleakClient Initialising...
+[2023-01-20 09:53:15,711] :INFO: [gui.py:112] BleakClient completed...
+[2023-01-20 09:53:15,712] :INFO: [gui.py:119] btclient conneting...
+[2023-01-20 09:53:27,792] :ERROR: [gui.py:170] ()
+[2023-01-20 09:53:27,795] :INFO: [gui.py:171] ===end of SN====: E2:EA:89:24:D3:1F
+[2023-01-20 09:53:27,796] :INFO: [gui.py:155] start SN: E2:EA:89:24:D3:1F
+[2023-01-20 09:53:27,796] :INFO: [gui.py:100] connecting to the peripheral
+[2023-01-20 09:53:28,305] :INFO: [gui.py:108] RSSI: -62
+[2023-01-20 09:53:28,306] :INFO: [gui.py:110] BleakClient Initialising...
+[2023-01-20 09:53:28,306] :INFO: [gui.py:112] BleakClient completed...
+[2023-01-20 09:53:28,307] :INFO: [gui.py:119] btclient conneting...
+[2023-01-20 09:53:43,790] :ERROR: [gui.py:170] ()
+[2023-01-20 09:53:43,798] :INFO: [gui.py:171] ===end of SN====: E2:EA:89:24:D3:1F
+[2023-01-20 09:53:43,798] :INFO: [gui.py:173] ################  RESULTS  ################
+[2023-01-20 09:53:57,800] :ERROR: [gui.py:170] ()
+[2023-01-20 09:53:57,803] :INFO: [gui.py:171] ===end of SN====: E2:EA:89:24:D3:1F
+[2023-01-20 09:53:57,803] :INFO: [gui.py:173] ################  RESULTS  ################
+[2023-01-20 09:54:13,802] :INFO: [gui.py:155] start SN: E2:EA:89:24:D3:1F
+[2023-01-20 09:54:13,803] :INFO: [gui.py:100] connecting to the peripheral
+[2023-01-20 09:54:14,186] :INFO: [gui.py:108] RSSI: -59
+[2023-01-20 09:54:14,186] :INFO: [gui.py:110] BleakClient Initialising...
+[2023-01-20 09:54:14,186] :INFO: [gui.py:112] BleakClient completed...
+[2023-01-20 09:54:14,186] :INFO: [gui.py:119] btclient conneting...
+[2023-01-20 09:54:27,806] :INFO: [gui.py:155] start SN: E2:EA:89:24:D3:1F
+[2023-01-20 09:54:27,807] :INFO: [gui.py:100] connecting to the peripheral
+[2023-01-20 09:54:28,549] :INFO: [gui.py:108] RSSI: -59
+[2023-01-20 09:54:28,549] :INFO: [gui.py:110] BleakClient Initialising...
+[2023-01-20 09:54:28,550] :INFO: [gui.py:112] BleakClient completed...
+[2023-01-20 09:54:28,550] :INFO: [gui.py:119] btclient conneting...
+[2023-01-20 09:54:43,819] :ERROR: [gui.py:170] ()
+[2023-01-20 09:54:43,822] :INFO: [gui.py:171] ===end of SN====: E2:EA:89:24:D3:1F
+[2023-01-20 09:54:43,822] :INFO: [gui.py:155] start SN: E2:EA:89:24:D3:1F
+[2023-01-20 09:54:43,822] :INFO: [gui.py:100] connecting to the peripheral
+[2023-01-20 09:54:44,202] :INFO: [gui.py:108] RSSI: -59
+[2023-01-20 09:54:44,202] :INFO: [gui.py:110] BleakClient Initialising...
+[2023-01-20 09:54:44,202] :INFO: [gui.py:112] BleakClient completed...
+[2023-01-20 09:54:44,202] :INFO: [gui.py:119] btclient conneting...
+[2023-01-20 09:54:57,835] :ERROR: [gui.py:170] ()
+[2023-01-20 09:54:57,838] :INFO: [gui.py:171] ===end of SN====: E2:EA:89:24:D3:1F
+[2023-01-20 09:54:57,839] :INFO: [gui.py:155] start SN: E2:EA:89:24:D3:1F
+[2023-01-20 09:54:57,839] :INFO: [gui.py:100] connecting to the peripheral
+[2023-01-20 09:54:58,571] :INFO: [gui.py:108] RSSI: -59
+[2023-01-20 09:54:58,572] :INFO: [gui.py:110] BleakClient Initialising...
+[2023-01-20 09:54:58,573] :INFO: [gui.py:112] BleakClient completed...
+[2023-01-20 09:54:58,573] :INFO: [gui.py:119] btclient conneting...
+[2023-01-20 09:55:13,829] :ERROR: [gui.py:170] ()
+[2023-01-20 09:55:13,832] :INFO: [gui.py:171] ===end of SN====: E2:EA:89:24:D3:1F
+[2023-01-20 09:55:13,832] :INFO: [gui.py:173] ################  RESULTS  ################
+[2023-01-20 09:55:27,854] :ERROR: [gui.py:170] ()
+[2023-01-20 09:55:27,858] :INFO: [gui.py:171] ===end of SN====: E2:EA:89:24:D3:1F
+[2023-01-20 09:55:27,858] :INFO: [gui.py:173] ################  RESULTS  ################
+[2023-01-20 09:55:43,847] :INFO: [gui.py:155] start SN: E2:EA:89:24:D3:1F
+[2023-01-20 09:55:43,847] :INFO: [gui.py:100] connecting to the peripheral
+[2023-01-20 09:55:44,349] :INFO: [gui.py:108] RSSI: -65
+[2023-01-20 09:55:44,350] :INFO: [gui.py:110] BleakClient Initialising...
+[2023-01-20 09:55:44,350] :INFO: [gui.py:112] BleakClient completed...
+[2023-01-20 09:55:44,350] :INFO: [gui.py:119] btclient conneting...
+[2023-01-20 09:55:57,866] :INFO: [gui.py:155] start SN: E2:EA:89:24:D3:1F
+[2023-01-20 09:55:57,867] :INFO: [gui.py:100] connecting to the peripheral
+[2023-01-20 09:55:58,596] :INFO: [gui.py:108] RSSI: -60
+[2023-01-20 09:55:58,596] :INFO: [gui.py:110] BleakClient Initialising...
+[2023-01-20 09:55:58,597] :INFO: [gui.py:112] BleakClient completed...
+[2023-01-20 09:55:58,597] :INFO: [gui.py:119] btclient conneting...
+[2023-01-20 09:56:13,879] :ERROR: [gui.py:170] ()
+[2023-01-20 09:56:13,892] :INFO: [gui.py:171] ===end of SN====: E2:EA:89:24:D3:1F
+[2023-01-20 09:56:13,893] :INFO: [gui.py:155] start SN: E2:EA:89:24:D3:1F
+[2023-01-20 09:56:13,893] :INFO: [gui.py:100] connecting to the peripheral
+[2023-01-20 09:56:14,745] :INFO: [gui.py:108] RSSI: -68
+[2023-01-20 09:56:14,745] :INFO: [gui.py:110] BleakClient Initialising...
+[2023-01-20 09:56:14,745] :INFO: [gui.py:112] BleakClient completed...
+[2023-01-20 09:56:14,746] :INFO: [gui.py:119] btclient conneting...
+[2023-01-20 09:56:27,878] :ERROR: [gui.py:170] ()
+[2023-01-20 09:56:27,881] :INFO: [gui.py:171] ===end of SN====: E2:EA:89:24:D3:1F
+[2023-01-20 09:56:27,882] :INFO: [gui.py:155] start SN: E2:EA:89:24:D3:1F
+[2023-01-20 09:56:27,882] :INFO: [gui.py:100] connecting to the peripheral
+[2023-01-20 09:56:28,020] :INFO: [gui.py:108] RSSI: -69
+[2023-01-20 09:56:28,020] :INFO: [gui.py:110] BleakClient Initialising...
+[2023-01-20 09:56:28,021] :INFO: [gui.py:112] BleakClient completed...
+[2023-01-20 09:56:28,021] :INFO: [gui.py:119] btclient conneting...
+[2023-01-20 09:56:43,902] :ERROR: [gui.py:170] ()
+[2023-01-20 09:56:43,914] :INFO: [gui.py:171] ===end of SN====: E2:EA:89:24:D3:1F
+[2023-01-20 09:56:43,914] :INFO: [gui.py:173] ################  RESULTS  ################
+[2023-01-20 09:56:57,887] :ERROR: [gui.py:170] ()
+[2023-01-20 09:56:57,890] :INFO: [gui.py:171] ===end of SN====: E2:EA:89:24:D3:1F
+[2023-01-20 09:56:57,890] :INFO: [gui.py:173] ################  RESULTS  ################
+[2023-01-20 09:57:13,929] :INFO: [gui.py:155] start SN: E2:EA:89:24:D3:1F
+[2023-01-20 09:57:13,929] :INFO: [gui.py:100] connecting to the peripheral
+[2023-01-20 09:57:14,655] :INFO: [gui.py:108] RSSI: -61
+[2023-01-20 09:57:14,656] :INFO: [gui.py:110] BleakClient Initialising...
+[2023-01-20 09:57:14,656] :INFO: [gui.py:112] BleakClient completed...
+[2023-01-20 09:57:14,656] :INFO: [gui.py:119] btclient conneting...
+[2023-01-20 09:57:27,906] :INFO: [gui.py:155] start SN: E2:EA:89:24:D3:1F
+[2023-01-20 09:57:27,911] :INFO: [gui.py:100] connecting to the peripheral
+[2023-01-20 09:57:29,376] :INFO: [gui.py:108] RSSI: -60
+[2023-01-20 09:57:29,376] :INFO: [gui.py:110] BleakClient Initialising...
+[2023-01-20 09:57:29,377] :INFO: [gui.py:112] BleakClient completed...
+[2023-01-20 09:57:29,377] :INFO: [gui.py:119] btclient conneting...
+[2023-01-20 09:57:43,949] :ERROR: [gui.py:170] ()
+[2023-01-20 09:57:43,952] :INFO: [gui.py:171] ===end of SN====: E2:EA:89:24:D3:1F
+[2023-01-20 09:57:43,952] :INFO: [gui.py:155] start SN: E2:EA:89:24:D3:1F
+[2023-01-20 09:57:43,952] :INFO: [gui.py:100] connecting to the peripheral
+[2023-01-20 09:57:44,592] :INFO: [gui.py:108] RSSI: -71
+[2023-01-20 09:57:44,592] :INFO: [gui.py:110] BleakClient Initialising...
+[2023-01-20 09:57:44,592] :INFO: [gui.py:112] BleakClient completed...
+[2023-01-20 09:57:44,593] :INFO: [gui.py:119] btclient conneting...
+[2023-01-20 09:57:57,931] :ERROR: [gui.py:170] ()
+[2023-01-20 09:57:57,934] :INFO: [gui.py:171] ===end of SN====: E2:EA:89:24:D3:1F
+[2023-01-20 09:57:57,934] :INFO: [gui.py:155] start SN: E2:EA:89:24:D3:1F
+[2023-01-20 09:57:57,935] :INFO: [gui.py:100] connecting to the peripheral
+[2023-01-20 09:57:58,116] :INFO: [gui.py:108] RSSI: -68
+[2023-01-20 09:57:58,116] :INFO: [gui.py:110] BleakClient Initialising...
+[2023-01-20 09:57:58,117] :INFO: [gui.py:112] BleakClient completed...
+[2023-01-20 09:57:58,117] :INFO: [gui.py:119] btclient conneting...
+[2023-01-20 09:58:13,956] :ERROR: [gui.py:170] ()
+[2023-01-20 09:58:13,959] :INFO: [gui.py:171] ===end of SN====: E2:EA:89:24:D3:1F
+[2023-01-20 09:58:13,960] :INFO: [gui.py:173] ################  RESULTS  ################
+[2023-01-20 09:58:27,936] :ERROR: [gui.py:170] ()
+[2023-01-20 09:58:27,939] :INFO: [gui.py:171] ===end of SN====: E2:EA:89:24:D3:1F
+[2023-01-20 09:58:27,940] :INFO: [gui.py:173] ################  RESULTS  ################
+[2023-01-20 09:58:43,963] :INFO: [gui.py:155] start SN: E2:EA:89:24:D3:1F
+[2023-01-20 09:58:43,963] :INFO: [gui.py:100] connecting to the peripheral
+[2023-01-20 09:58:44,583] :INFO: [gui.py:108] RSSI: -70
+[2023-01-20 09:58:44,584] :INFO: [gui.py:110] BleakClient Initialising...
+[2023-01-20 09:58:44,584] :INFO: [gui.py:112] BleakClient completed...
+[2023-01-20 09:58:44,584] :INFO: [gui.py:119] btclient conneting...
+[2023-01-20 09:58:57,941] :INFO: [gui.py:155] start SN: E2:EA:89:24:D3:1F
+[2023-01-20 09:58:57,943] :INFO: [gui.py:100] connecting to the peripheral
+[2023-01-20 09:59:01,402] :INFO: [gui.py:108] RSSI: -70
+[2023-01-20 09:59:01,402] :INFO: [gui.py:110] BleakClient Initialising...
+[2023-01-20 09:59:01,402] :INFO: [gui.py:112] BleakClient completed...
+[2023-01-20 09:59:01,403] :INFO: [gui.py:119] btclient conneting...
+[2023-01-20 09:59:13,968] :ERROR: [gui.py:170] ()
+[2023-01-20 09:59:13,974] :INFO: [gui.py:171] ===end of SN====: E2:EA:89:24:D3:1F
+[2023-01-20 09:59:13,974] :INFO: [gui.py:155] start SN: E2:EA:89:24:D3:1F
+[2023-01-20 09:59:13,975] :INFO: [gui.py:100] connecting to the peripheral
+[2023-01-20 09:59:14,479] :INFO: [gui.py:108] RSSI: -68
+[2023-01-20 09:59:14,479] :INFO: [gui.py:110] BleakClient Initialising...
+[2023-01-20 09:59:14,480] :INFO: [gui.py:112] BleakClient completed...
+[2023-01-20 09:59:14,480] :INFO: [gui.py:119] btclient conneting...
+[2023-01-20 09:59:27,964] :ERROR: [gui.py:170] ()
+[2023-01-20 09:59:27,967] :INFO: [gui.py:171] ===end of SN====: E2:EA:89:24:D3:1F
+[2023-01-20 09:59:27,967] :INFO: [gui.py:155] start SN: E2:EA:89:24:D3:1F
+[2023-01-20 09:59:27,968] :INFO: [gui.py:100] connecting to the peripheral
+[2023-01-20 09:59:29,295] :INFO: [gui.py:108] RSSI: -72
+[2023-01-20 09:59:29,296] :INFO: [gui.py:110] BleakClient Initialising...
+[2023-01-20 09:59:29,297] :INFO: [gui.py:112] BleakClient completed...
+[2023-01-20 09:59:29,298] :INFO: [gui.py:119] btclient conneting...
+[2023-01-20 09:59:43,987] :ERROR: [gui.py:170] ()
+[2023-01-20 09:59:43,989] :INFO: [gui.py:171] ===end of SN====: E2:EA:89:24:D3:1F
+[2023-01-20 09:59:43,990] :INFO: [gui.py:173] ################  RESULTS  ################
+[2023-01-20 09:59:57,974] :ERROR: [gui.py:170] ()
+[2023-01-20 09:59:57,978] :INFO: [gui.py:171] ===end of SN====: E2:EA:89:24:D3:1F
+[2023-01-20 09:59:57,978] :INFO: [gui.py:173] ################  RESULTS  ################
+[2023-01-20 10:00:14,004] :INFO: [gui.py:155] start SN: E2:EA:89:24:D3:1F
+[2023-01-20 10:00:14,005] :INFO: [gui.py:100] connecting to the peripheral
+[2023-01-20 10:00:14,731] :INFO: [gui.py:108] RSSI: -61
+[2023-01-20 10:00:14,731] :INFO: [gui.py:110] BleakClient Initialising...
+[2023-01-20 10:00:14,731] :INFO: [gui.py:112] BleakClient completed...
+[2023-01-20 10:00:14,731] :INFO: [gui.py:119] btclient conneting...
+[2023-01-20 10:00:27,980] :INFO: [gui.py:155] start SN: E2:EA:89:24:D3:1F
+[2023-01-20 10:00:27,985] :INFO: [gui.py:100] connecting to the peripheral
+[2023-01-20 10:00:28,376] :INFO: [gui.py:108] RSSI: -61
+[2023-01-20 10:00:28,376] :INFO: [gui.py:110] BleakClient Initialising...
+[2023-01-20 10:00:28,377] :INFO: [gui.py:112] BleakClient completed...
+[2023-01-20 10:00:28,377] :INFO: [gui.py:119] btclient conneting...
+[2023-01-20 10:00:44,013] :ERROR: [gui.py:170] ()
+[2023-01-20 10:00:44,016] :INFO: [gui.py:171] ===end of SN====: E2:EA:89:24:D3:1F
+[2023-01-20 10:00:44,016] :INFO: [gui.py:155] start SN: E2:EA:89:24:D3:1F
+[2023-01-20 10:00:44,016] :INFO: [gui.py:100] connecting to the peripheral
+[2023-01-20 10:00:44,643] :INFO: [gui.py:108] RSSI: -72
+[2023-01-20 10:00:44,644] :INFO: [gui.py:110] BleakClient Initialising...
+[2023-01-20 10:00:44,644] :INFO: [gui.py:112] BleakClient completed...
+[2023-01-20 10:00:44,644] :INFO: [gui.py:119] btclient conneting...
+[2023-01-20 10:00:58,000] :ERROR: [gui.py:170] ()
+[2023-01-20 10:00:58,003] :INFO: [gui.py:171] ===end of SN====: E2:EA:89:24:D3:1F
+[2023-01-20 10:00:58,003] :INFO: [gui.py:155] start SN: E2:EA:89:24:D3:1F
+[2023-01-20 10:00:58,004] :INFO: [gui.py:100] connecting to the peripheral
+[2023-01-20 10:00:58,474] :INFO: [gui.py:108] RSSI: -61
+[2023-01-20 10:00:58,475] :INFO: [gui.py:110] BleakClient Initialising...
+[2023-01-20 10:00:58,475] :INFO: [gui.py:112] BleakClient completed...
+[2023-01-20 10:00:58,476] :INFO: [gui.py:119] btclient conneting...
